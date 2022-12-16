@@ -6,7 +6,7 @@ describe("Engineer", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tGh = "Bob81";
-        const tEng = Employee(tName, tId, tEmail, tGh);
+        const tEng = Engineer(tName, tId, tEmail, tGh);
 
         expect(tEng.getGithub()).teBe(tGh);
     });
@@ -16,7 +16,7 @@ describe("Engineer", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tGh = "Bob81";
-        const tEng = Employee(tName, tId, tEmail, tGh);
+        const tEng = Engineer(tName, tId, tEmail, tGh);
 
         expect(tEng.getRole()).teBe("Engineer");
     });

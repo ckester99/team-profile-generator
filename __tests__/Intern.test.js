@@ -6,7 +6,7 @@ describe("Intern", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tSch = "UNCC";
-        const tInt = Employee(tName, tId, tEmail, tSch);
+        const tInt = Intern(tName, tId, tEmail, tSch);
 
         expect(tInt.getSchool()).teBe(tSch);
     });
@@ -16,7 +16,7 @@ describe("Intern", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tSch = "UNCC";
-        const tInt = Employee(tName, tId, tEmail, tSch);
+        const tInt = Intern(tName, tId, tEmail, tSch);
 
         expect(tInt.getRole()).teBe("Intern");
     });
