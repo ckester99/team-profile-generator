@@ -1,4 +1,4 @@
-Manager = require("../src/Manager");
+const Manager = require("../src/Manager");
 
 describe("Manager", () => {
     it("should have a school property and a getSchool method", () => {
@@ -6,9 +6,9 @@ describe("Manager", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tOfficeNum = "12";
-        const tMan = Manager(tName, tId, tEmail, tOfficeNum);
+        const tMan = new Manager(tName, tId, tEmail, tOfficeNum);
 
-        expect(tMan.getOfficeNumber()).teBe(tOfficeNum);
+        expect(tMan.getOfficeNumber()).toEqual(tOfficeNum);
     });
 
     it("should have a getRole method that returns 'Manager'", () => {
@@ -16,8 +16,8 @@ describe("Manager", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tOfficeNum = "12";
-        const tMan = Manager(tName, tId, tEmail, tOfficeNum);
+        const tMan = new Manager(tName, tId, tEmail, tOfficeNum);
 
-        expect(tMan.getRole()).teBe("Manager");
+        expect(tMan.getRole()).toEqual("Manager");
     });
 });

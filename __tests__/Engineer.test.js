@@ -1,4 +1,4 @@
-Engineer = require("../src/Engineer");
+const Engineer = require("../src/Engineer");
 
 describe("Engineer", () => {
     it("should have an github property and a getGithub method", () => {
@@ -6,9 +6,9 @@ describe("Engineer", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tGh = "Bob81";
-        const tEng = Engineer(tName, tId, tEmail, tGh);
+        const tEng = new Engineer(tName, tId, tEmail, tGh);
 
-        expect(tEng.getGithub()).teBe(tGh);
+        expect(tEng.getGithub()).toEqual(tGh);
     });
 
     it("should have a getRole method that returns 'Engineer'", () => {
@@ -16,8 +16,8 @@ describe("Engineer", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tGh = "Bob81";
-        const tEng = Engineer(tName, tId, tEmail, tGh);
+        const tEng = new Engineer(tName, tId, tEmail, tGh);
 
-        expect(tEng.getRole()).teBe("Engineer");
+        expect(tEng.getRole()).toEqual("Engineer");
     });
 });

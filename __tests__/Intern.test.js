@@ -1,4 +1,4 @@
-Intern = require("../src/Intern");
+const Intern = require("../src/Intern");
 
 describe("Intern", () => {
     it("should have a school property and a getSchool method", () => {
@@ -6,9 +6,9 @@ describe("Intern", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tSch = "UNCC";
-        const tInt = Intern(tName, tId, tEmail, tSch);
+        const tInt = new Intern(tName, tId, tEmail, tSch);
 
-        expect(tInt.getSchool()).teBe(tSch);
+        expect(tInt.getSchool()).toEqual(tSch);
     });
 
     it("should have a getRole method that returns 'Intern'", () => {
@@ -16,8 +16,8 @@ describe("Intern", () => {
         const tId = "15";
         const tEmail = "Bob@gmail.com";
         const tSch = "UNCC";
-        const tInt = Intern(tName, tId, tEmail, tSch);
+        const tInt = new Intern(tName, tId, tEmail, tSch);
 
-        expect(tInt.getRole()).teBe("Intern");
+        expect(tInt.getRole()).toEqual("Intern");
     });
 });
