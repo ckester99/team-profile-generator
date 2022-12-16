@@ -1,4 +1,4 @@
-const Engineer = require("../src/Engineer");
+const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
     it("should have an github property and a getGithub method", () => {

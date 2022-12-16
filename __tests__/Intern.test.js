@@ -1,4 +1,4 @@
-const Intern = require("../src/Intern");
+const Intern = require("../lib/Intern");
 
 describe("Intern", () => {
     it("should have a school property and a getSchool method", () => {

@@ -1,4 +1,4 @@
-const Employee = require("../src/Employee");
+const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
     it("should have a name property and getName method", () => {

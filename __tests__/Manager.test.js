@@ -1,4 +1,4 @@
-const Manager = require("../src/Manager");
+const Manager = require("../lib/Manager");
 
 describe("Manager", () => {
     it("should have a school property and a getSchool method", () => {
