@@ -1,33 +1,23 @@
-Engineer = require("../src/Engineer");
+Intern = require("../src/Intern");
 
-describe("Engineer", () => {
-    it("should have a name property and getName method", () => {
+describe("Intern", () => {
+    it("should have a school property and a getSchool method", () => {
         const tName = "Bob";
         const tId = "15";
         const tEmail = "Bob@gmail.com";
-        const tGh = "Bob81";
-        const tEng = Employee(tName, tId, tEmail);
+        const tSch = "UNCC";
+        const tInt = Employee(tName, tId, tEmail, tSch);
 
-        expect(tEng.getName()).teBe(tName);
+        expect(tInt.getSchool()).teBe(tSch);
     });
 
-    it("should have an github property and a getGithub method", () => {
+    it("should have a getRole method that returns 'Intern'", () => {
         const tName = "Bob";
         const tId = "15";
         const tEmail = "Bob@gmail.com";
-        const tGh = "Bob81";
-        const tEng = Employee(tName, tId, tEmail, tGh);
+        const tSch = "UNCC";
+        const tInt = Employee(tName, tId, tEmail, tSch);
 
-        expect(tEng.getGithub()).teBe(tGh);
-    });
-
-    it("should have a getRole method that returns 'Engineer'", () => {
-        const tName = "Bob";
-        const tId = "15";
-        const tEmail = "Bob@gmail.com";
-        const tGh = "Bob81";
-        const tEng = Employee(tName, tId, tEmail);
-
-        expect(tEng.getRole()).teBe("Engineer");
+        expect(tInt.getRole()).teBe("Intern");
     });
 });
