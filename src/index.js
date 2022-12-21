@@ -126,4 +126,24 @@ function addIntern() {
 
 function finishTeam() {
     console.log(team);
+    let outputHTML = h.getTemplateHead();
+
+    for (const teammate of team) {
+        let customProp = "";
+        switch (teammate.getRole()) {
+            case "Manager":
+                customProp = teammate.getOfficeNumber();
+                break;
+            case "Engineer":
+                customProp = teammate.getGithub();
+                break;
+            case "Intern":
+                customProp = teammate.getSchool();
+                break;
+        }
+
+        outputHTML += h.genMember(teammate.getName(), teammate.getRole(), teammate.getId(), teammate.getEmail(), customProp);
+    }
+    outputHTML += h.getTemplateTail();
+    fs.writeFile("../dist/index.html", outputHTML, (e) => (e ? console.error(e.message) : console.log("Success!")));
 }
