@@ -11,3 +11,4 @@ This is an application I made using node.js to allow a manager to create an html
 
 ## Workflow
 
+[Walkthrough Video](https://user-images.githubusercontent.com/43022124/208804520-425d0dc8-0e6e-42e2-b029-a320a20becbe.webm)
