@@ -1,7 +1,33 @@
-const genHTML = require("./generateHTML.js");
+const generateHTML = require("./generateHTML.js");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+const h = new generateHTML();
+
+inquirer.prompt([
+    {
+        type: "input",
+        message: "What is your manager's name?",
+        name: "name",
+    },
+    {
+        type: "input",
+        message: "What is your manager's employee ID?",
+        name: "id",
+    },
+    {
+        type: "input",
+        message: "What is your manager's email address?",
+        name: "email",
+    },
+    {
+        type: "input",
+        message: "What is your manager's office number?",
+        name: "officeNum",
+    },
+]);
+
+/*
 inquirer
     .prompt([
         {
@@ -52,3 +78,4 @@ inquirer
         },
     ])
     .then((r) => fs.writeFile("./utils/README.md", markdown.create(r), (e) => (e ? console.error(e.message) : console.log("Success!"))));
+*/

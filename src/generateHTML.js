@@ -25,17 +25,32 @@ class genHTML {
     </html>`;
     }
 
-    genMember() {
-        return `<div class="card rounded-3" style="width: 16rem">
+    genMember(name, title, id, email, customProp) {
+        let customHTML = ``;
+        switch (title) {
+            case "Manager":
+                title = `<i class="fa-solid fa-mug-saucer"></i> ` + title;
+                customHTML = `<p>Office Number: ${customProp}</p>`;
+                break;
+            case "Engineer":
+                title = `<i class="fa-solid fa-glasses"></i> ` + title;
+                customHTML = `<p>Github: <a href= "https://github.com/${customProp}">${customProp}</a></p>`;
+                break;
+            case "Intern":
+                title = `<i class="fa-solid fa-user-graduate"></i> ` + title;
+                customHTML = `<p>School: ${customProp}</p>`;
+                break;
+        }
+        return `<div class="card rounded-3" style="width: 20rem">
         <div class="card-body p-0">
             <div class="bg-primary rounded-top text-white px-4 pt-3 pb-2">
-                <h2 class="">Name</h2>
-                <h3>Title</h3>
+                <h2>${name}</h2>
+                <h3>${title}</h3>
             </div>
-            <div class="d-flex flex-column justify-content-center px-4 mb-4" style="height: 9rem">
-                <div>ID</div>
-                <div>Email</div>
-                <div>Custom</div>
+            <div class="d-flex flex-column justify-content-center px-4" style="height: 12rem">
+                <p>ID: ${id}</p>
+                <p>Email: <a href="mailto:${email}">${email}</a></p>
+                ${customHTML}
             </div>
         </div>
     </div>`;
